@@ -25,15 +25,15 @@ INST
       end
       
       def initialize
-        @x = Random.float(0.0,20.0) - 10.0
-        @y = Random.float(0.0,20.0) - 10.0
+        @x = Rand.float(0.0,20.0) - 10.0
+        @y = Rand.float(0.0,20.0) - 10.0
         
         @r = Math.sqrt(@x**2 + @y**2)
         @rad = Math.atan2(@y, @x)
         @deg = @rad.to_deg
         
-        @to_polar = Random.bool
-        @first_coord = Random.bool
+        @to_polar = Rand.bool
+        @first_coord = Rand.bool
       end
       
       def solution

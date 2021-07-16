@@ -19,8 +19,8 @@ INST
       
       def initialize
         @values = []
-        Random.int(2,4).times do
-          @values <<  Random.mag_float(0.001,10000)
+        Rand.int(2,4).times do
+          @values <<  Rand.mag_float(0.001,10000)
         end
       end
       

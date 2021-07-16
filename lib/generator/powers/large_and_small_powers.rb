@@ -28,8 +28,8 @@ INST
       end
       
       def initialize
-        @x = Random.mag_float(0.0001,10000)
-        @n = Random.mag_float(0.01,100)
+        @x = Rand.mag_float(0.0001,10000)
+        @n = Rand.mag_float(0.01,100)
       end
       
       def solution

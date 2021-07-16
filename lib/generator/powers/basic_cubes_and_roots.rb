@@ -22,8 +22,8 @@ INST
       end
       
       def initialize
-        @x = Random.mag_float(0.0001,1000)
-        @n = Random.element( [1/3.0, 3.0] )
+        @x = Rand.mag_float(0.0001,1000)
+        @n = Rand.element( [1/3.0, 3.0] )
       end
       
       def solution

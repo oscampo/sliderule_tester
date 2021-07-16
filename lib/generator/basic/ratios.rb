@@ -20,9 +20,9 @@ INST
       end
       
       def initialize
-        @a = Random.mag_float(0.001,10000)
-        @c = Random.mag_float(0.001,10000)
-        @d = Random.mag_float(0.001,10000)
+        @a = Rand.mag_float(0.001,10000)
+        @c = Rand.mag_float(0.001,10000)
+        @d = Rand.mag_float(0.001,10000)
       end
       
       def solution

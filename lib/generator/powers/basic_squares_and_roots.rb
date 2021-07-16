@@ -22,22 +22,25 @@ INST
       end
       
       def initialize
-        @x = Random.mag_float(0.0001,1000)
-        @n = Random.smaple( [0.5, 2.0] )
-      end
-      
-      def solution
-        return @x**@n
+        @x = Rand.mag_float(0.0001,1000)
+        @n = Rand.element( [0.5, 2.0] )
+		#@n = Rand.float( 0.5, 2.0 )
       end
       
       def to_s
         if( @n >= 1.0 )
+		@n=2
           return "#{@x}^2"
         else
+		@n=0.5
           return "sqrt(#{@x})"
         end
       end
-      
+	  
+      def solution
+        return @x**@n
+      end
+	  
     end
   end
 end

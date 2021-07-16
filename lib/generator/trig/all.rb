@@ -7,7 +7,7 @@ module Generator
       end
       
       def self.description
-        return "Practice randomly selected trig problems."
+        return "Practice Randly selected trig problems."
       end
       
       def self.instructions
@@ -17,8 +17,8 @@ INST
       end
       
       def initialize
-        @base_function = Random.element(test_functions())
-        @angle_rad = random_angle(@base_function)
+        @base_function = Rand.element(test_functions())
+        @angle_rad = Rand_angle(@base_function)
         @angle_deg = @angle_rad.to_deg
         @x = Math.send(@base_function, @angle_rad)
         
@@ -61,16 +61,16 @@ INST
        # Subclasses should override this to return a boolean on if the inverse
        # function should be tested or not.
       def test_inverse_function?
-        return Random.bool
+        return Rand.bool
       end
       
       # Subclasses should override this to return a boolean on if the problem
       # should use radians or not.
       def test_with_radians?
-        return Random.bool
+        return Rand.bool
       end
       
-      # Return a random angle, in RADIANS in one of the following range groups.
+      # Return a Rand angle, in RADIANS in one of the following range groups.
       # This does not return an even distribution fomr 0 to 90 degrees, instead it
       # returns an even distribution from within each range.  This allows better
       # testing of specialty ranges.
@@ -82,11 +82,11 @@ INST
       # to 90 can be treated as one domain.  Cosine is the reverse (which means
       # just using the compliment of whatever was generated for sin?, and tangent
       # is completely symmetrical.
-      def random_angle(function)
-        RandomAngle.for_function(function)
+      def Rand_angle(function)
+        RandAngle.for_function(function)
       end
       
-      module RandomAngle
+      module RandAngle
         INTERVALS = {
           :really_tiny => [0.00000000000000000000, 0.01000000000000000000], # 0 deg to 0.57 deg
           :tiny        => [0.00000000000000000000, 0.10000000000000000000], # 0.57 deg to 5.7 deg
@@ -122,9 +122,9 @@ INST
         def self.for_function(func)
           domain_alias = FUNCTION_DOMAIN_ALIASES[func]
           domain = DOMAINS[domain_alias]
-          interval_key = Random.element(domain)
+          interval_key = Rand.element(domain)
           interval = INTERVALS[interval_key]
-          Random.float(*interval)
+          Rand.float(*interval)
         end
 
       end

@@ -1,6 +1,6 @@
 # Load the application stack.
-require 'app'
-
+#require 'C:\Users\user\Documents\sliderule_tester\app.rb'
+require File.join(File.dirname(__FILE__), 'app.rb')
 # Define a subroutine to handle interrupts more robustly.
 def handle_interrupt
   # Ask for input.

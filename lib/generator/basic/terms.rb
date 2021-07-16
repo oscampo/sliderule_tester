@@ -20,11 +20,11 @@ INST
       end
       
       def initialize
-        num_count = Random.int(2,5)
-        denom_count = Random.int(2,5)
+        num_count = Rand.int(2,5)
+        denom_count = Rand.int(2,5)
         
-        @numerators = Array.new(num_count) { Random.mag_float(0.001,1000) }
-        @denominators = Array.new(denom_count) { Random.mag_float(0.001,1000) }
+        @numerators = Array.new(num_count) { Rand.mag_float(0.001,1000) }
+        @denominators = Array.new(denom_count) { Rand.mag_float(0.001,1000) }
       end
       
       def solution

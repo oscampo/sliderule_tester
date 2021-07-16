@@ -22,8 +22,8 @@ INST
       end
       
       def initialize
-        @b = Random.element([:e, 10])
-        @x = Random.element([Random.mag_float(0.0001,1e-10), Random.mag_float(10000,1e10)]) * Random.sign
+        @b = Rand.element([:e, 10])
+        @x = Rand.element([Rand.mag_float(0.0001,1e-10), Rand.mag_float(10000,1e10)]) * Rand.sign
         @b_num = @b==:e ? Math::E : @b
       end
       
@@ -32,6 +32,10 @@ INST
       end
       
       def to_s
+		if @x<0
+			return @x=-@x
+		end
+		
         if @b==:e
           return "ln(#{@x})"
         elsif @b==10

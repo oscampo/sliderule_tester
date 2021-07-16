@@ -24,9 +24,9 @@ INST
       end
       
       def initialize
-        @deg = Random.float(0.0,360.0)
+        @deg = Rand.float(0.0,360.0)
         @rad = @deg.to_rad
-        @to_rad = Random.bool
+        @to_rad = Rand.bool
       end
       
       def solution

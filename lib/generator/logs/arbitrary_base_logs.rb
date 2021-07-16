@@ -22,8 +22,8 @@ INST
       end
       
       def initialize
-        @b = Random.element( ((2...16).to_a << :e) )
-        @x = Random.mag_float(0.0001,10000)
+        @b = Rand.element( ((2...16).to_a << :e) )
+        @x = Rand.mag_float(0.0001,10000)
         @b_num = @b==:e ? Math::E : @b
       end
       

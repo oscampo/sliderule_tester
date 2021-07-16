@@ -1,4 +1,5 @@
 # A class to get a solution and an answer, and compare it to the correct solution.
+
 class AnswerAnalyzer
   
   # Given the solution value and the answer value, give back a correctness

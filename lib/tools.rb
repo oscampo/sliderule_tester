@@ -1,2 +1,2 @@
-require 'tools/random'
+require 'tools/rand'
 require 'tools/guid'
